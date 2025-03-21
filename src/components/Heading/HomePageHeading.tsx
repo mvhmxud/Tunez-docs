@@ -31,18 +31,12 @@ export default function HomepageHeader() {
             seamless integration into any project.
           </p>
 
-          <div className="animate-fade-in animation-delay-200">
+          <div className="animate-fade-in animation-delay-200 ">
             <Link
-              className="button button--primary button--lg margin-right--md"
+              className="button button--outline button--lg margin-right--md"
               to="/docs/intro"
             >
               Get Started
-            </Link>
-            <Link
-              className="button button--outline button--lg"
-              to="https://github.com/mvhmxud/tunez"
-            >
-              View on GitHub
             </Link>
           </div>
         </div>

@@ -1,23 +1,12 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
-  page: true
-  socials:
-    x: yangshunz
-    github: yangshun
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+Mahmoud:
+  name: Mahmoud Ashraf
+  title: Front End Devloper
+  url: https://github/mvhmxud
+  image_url: https://i.ibb.co/n8sQ9kS1/1741164691534.jpg
   page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
+    permalink: '/all-Mahmoud-articles'
   socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+    x: mvhmxud
+    linkedin: mahmoud-ashraf-4a69931b7
+    github: mvhmxud
+    newsletter: ''
