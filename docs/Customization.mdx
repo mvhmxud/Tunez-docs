@@ -1,0 +1,63 @@
+---
+sidebar_label: ' Customization '
+sidebar_position: 3
+---
+
+#  Customization
+
+Tunez is built to be fully customizable, allowing you to tweak its appearance and behavior to fit your project. You can control themes, visibility of UI elements, and more.
+
+## 🖌 Theme Customization
+
+The `theme` prop allows you to change the colors of the player to match your app’s design. The available theme options are:
+
+```ts
+export interface ThemeOptions {
+  containerBg?: string; // Background color of the player
+  darkContainerBg?: string; // Background color in dark mode
+  primaryColor?: string; // Color of controls and progress bar thumb
+  progressbarbgColor?: string; // Color of the progress bar container
+  progressbarDarkbgColor?: string; // Color of the progress bar container in dark mode
+  secondaryColor?: string; // Color of the progress bar
+}
+```
+
+### Example Usage:
+
+```tsx
+<AudioPlayer
+  theme={{
+    containerBg: "#ffffff",
+    darkContainerBg: "#121212",
+    primaryColor: "#ff5722",
+    progressbarbgColor: "#e0e0e0",
+    progressbarDarkbgColor: "#333",
+    secondaryColor: "#ff9800",
+  }}
+/>
+```
+
+## 🎛 UI Customization
+
+You can enable or disable various UI elements using the `AudioPlayer` props.
+
+```tsx
+<AudioPlayer 
+  showThumbnail={true} 
+  showAuthor={true} 
+  forward={true} 
+  repeat={true} 
+  volume={true} 
+  darkMode={false} 
+/>
+```
+
+### Available Props:
+- `showThumbnail` (boolean) – Show or hide track thumbnails.
+- `showAuthor` (boolean) – Display the author name.
+- `forward` (boolean) – Show/hide forward/backward buttons.
+- `repeat` (boolean) – Enable/disable repeat button.
+- `volume` (boolean) – Show/hide volume control.
+- `darkMode` (boolean) – Enable dark mode styling.
+
+> 🎛️ **Build Your Own UI!** Not a fan of our component? No worries! The `useTunez` hook gives you full control to create your own player UI. Go wild and make it match your app's vibe! 😉
