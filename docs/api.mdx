@@ -1,0 +1,90 @@
+---
+sidebar_label: 'Api Reference '
+sidebar_position: 4
+---
+
+# API Reference
+
+## `useTunez` Hook
+
+The `useTunez` hook provides functions and values to control audio playback and manage the player state.
+
+### 📌 Functions
+
+#### `addToQueue(track: Track): void`
+Adds a track to the queue.
+
+#### `removeFromQueue(index: number): void`
+Removes a track from the queue.
+
+#### `playTrack(track: Track): void`
+Plays the selected track.
+
+#### `playNext(): void`
+Plays the next track in the queue.
+
+#### `playPrev(): void`
+Plays the previous track in the queue.
+
+#### `fastForward(): void`
+Fast-forwards the current track.
+
+#### `rewind(): void`
+Rewinds the current track.
+
+#### `togglePlay(): void`
+Toggles between play and pause.
+
+#### `toggleRepeat(): void`
+Toggles repeat mode.
+
+#### `setVolume(volume: number): void`
+Sets the volume level.
+
+### 📌 Values
+
+#### `currentTrack: Track | null`
+The currently playing track.
+
+#### `currentTrackIdx: number`
+The index of the current track in the queue.
+
+#### `isPlaying: boolean`
+Indicates whether a track is currently playing.
+
+#### `isLive: boolean`
+Indicates whether the track is a live stream.
+
+#### `volume: number`
+The current volume level.
+
+#### `repeatState: RepeatToggleStates`
+The current repeat mode.
+
+#### `tracksQueue: Track[]`
+The list of tracks in the queue.
+
+#### `audioRef: React.RefObject<HTMLAudioElement>`
+A reference to the audio element.
+
+---
+
+##  Types
+
+Track Type :
+
+```ts
+export interface Track {
+  title: string;
+  src: string;
+  author: string;
+  thumbnail?: string;
+}
+```
+
+RepeatToggleStates : 
+```ts
+export type RepeatToggleStates = "NOREPEAT" | "REPEAT" | "REPEATCURRENT"
+```
+
+Now you have full control over Tunez with `useTunez` 🚀

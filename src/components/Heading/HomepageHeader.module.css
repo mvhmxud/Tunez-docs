@@ -1,0 +1,38 @@
+.heroTitle {
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1;
+  background-clip: text;
+  display: inline-block;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+  padding: 2rem 0;
+}
+
+.highLight {
+    background: linear-gradient(
+      to right,
+      var(--ifm-heading-color),
+      var(--ifm-color-primary-lighter)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 4rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

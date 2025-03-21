@@ -1,0 +1,200 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #8a2be2; /* Purple */
+  --ifm-color-primary-dark: #7b26cc;
+  --ifm-color-primary-darker: #7424c1;
+  --ifm-color-primary-darkest: #601e9f;
+  --ifm-color-primary-light: #9640e5;
+  --ifm-color-primary-lighter: #9d4ae7;
+  --ifm-color-primary-lightest: #af6cec;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(138, 43, 226, 0.1);
+
+  /* Additional custom variables */
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  --ifm-heading-color: #1a1a1a;
+  --ifm-hero-text-color: #1a1a1a;
+  --ifm-button-background-color: var(--ifm-color-primary);
+  --ifm-button-color: #ffffff;
+  --ifm-card-background-color: #ffffff;
+  --ifm-footer-background-color: #f5f5f5;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+  --ifm-color-primary: #a64dff; /* Lighter purple for dark mode */
+  --ifm-color-primary-dark: #9933ff;
+  --ifm-color-primary-darker: #9326ff;
+  --ifm-color-primary-darkest: #7a00e6;
+  --ifm-color-primary-light: #b366ff;
+  --ifm-color-primary-lighter: #ba73ff;
+  --ifm-color-primary-lightest: #d199ff;
+  --docusaurus-highlighted-code-line-bg: rgba(166, 77, 255, 0.3);
+
+  /* Additional custom variables for dark mode */
+  --ifm-navbar-background-color: #1a1a1a;
+  --ifm-navbar-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --ifm-heading-color: #f5f5f5;
+  --ifm-hero-text-color: #f5f5f5;
+  --ifm-card-background-color: #2a2a2a;
+  --ifm-footer-background-color: #1a1a1a;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+.hero__title {
+  background: linear-gradient(to right, var(--ifm-color-primary), #b366ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.feature-card {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  padding: 1.5rem;
+  background-color: var(--ifm-card-background-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: rgba(100, 100, 100, 0.1);
+  margin: 0 auto 1rem;
+}
+
+[data-theme="dark"] .feature-icon {
+  background-color: rgba(166, 77, 255, 0.2);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: rgba(138, 43, 226, 0.1);
+  color: var(--ifm-color-primary);
+}
+
+[data-theme="dark"] .badge {
+  background-color: rgba(166, 77, 255, 0.2);
+}
+
+.badge-dot {
+  position: relative;
+  display: inline-flex;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.badge-dot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-color: var(--ifm-color-primary);
+  opacity: 0.75;
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.badge-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-color: var(--ifm-color-primary);
+}
+
+@keyframes ping {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+.highLight {
+  background: linear-gradient(
+    to right,
+    var(--ifm-heading-color),
+    var(--ifm-color-primary-lighter)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading-2 {
+  font-size: 3rem;
+  font-weight: 800;
+  padding: 0.2rem;
+}
+
+.gradient {
+  text-transform: capitalize;
+  background-size: 200% 200%;
+  background: linear-gradient(
+    to right,
+    var(--ifm-heading-color),
+    var(--ifm-color-primary-darker)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

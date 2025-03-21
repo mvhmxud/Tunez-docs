@@ -1,0 +1,64 @@
+---
+sidebar_label: ' Getting Started '
+sidebar_position: 2
+---
+
+# Getting Started with Tunez
+
+## 📦 Installation
+
+Install Tunez via npm:
+
+```bash
+npm install tunez
+```
+
+## 🛠 Setup
+
+First, import `TunezProvider`, `useTunez`, and the `AudioPlayer` component from `tunez`:
+
+```tsx
+import AudioPlayer , { TunezProvider, useTunez } from 'tunez';
+```
+
+Wrap your app with `TunezProvider` so you can access the `useTunez` hook from anywhere:
+
+```tsx
+function MyApp({ children }) {
+  return (
+    <TunezProvider>
+      {children}
+    </TunezProvider>
+  );
+}
+```
+
+## 🎵 Using Tunez
+
+You can now use `useTunez` to control playback. Here’s a simple example:
+
+```tsx
+import { useTunez, AudioPlayer } from 'tunez';
+
+const track = {
+  title: 'Sample Track',
+  src: 'https://example.com/sample.mp3',
+  author: 'Artist Name',
+  thumbnail: 'https://example.com/thumbnail.jpg',
+};
+
+function PlayerExample() {
+  const { playTrack } = useTunez();
+
+  return (
+    <div>
+      <AudioPlayer />
+      <button onClick={() => playTrack(track)}>
+        Click to Play
+      </button>
+    </div>
+  );
+}
+```
+
+Now you’re ready to integrate Tunez into your project! 🚀
